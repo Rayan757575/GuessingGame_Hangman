@@ -7,7 +7,7 @@ Este jogo foi feito em C++, utilizando algumas bibliotecas de C, para um trabalh
 O jogo tem como inspiração o  jogo  da “forca” e o programa "Roda roda Jequiti". Entretanto, ele é um jogo de dois jogadores, onde cada um irá inserir três palavras que serão sorteadas para o outro adivinhar, 
 sendo um jogo melhor de três.
 
-COMO jOGAR:
+COMO JOGAR:
 
 Para jogar você só precisa de um compilador. Os jogadores poderão utilizar qualquer uma das teclas, que representam
 uma letra, para inserir as palavras. Ou seja, não é permitida a entrada de acentos, caracteres especiais, números, ou uso de cedilha em uma palavra.
