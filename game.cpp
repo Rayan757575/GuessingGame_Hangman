@@ -4,22 +4,23 @@
 #include <Windows.h>
 
 	/*acertou palavra, 100 pontos; acertou palavra sorteia outra; errou, game over
-	a cada letra que ele tentar e errar a pontuação perde dez pontos*/
+	a cada letra que ele tentar e errar a pontuaÃ§Ã£o perde dez pontos*/
 	
-	//game de player dois. O player 1 digitara uma palavra e a dica dela, em seguida o outro tentará acertar a palavra, o que pontuar mais vence.
+	//game de player dois. O player 1 digitara uma palavra e a dica dela, em seguida o outro tentarÃ¡ acertar a palavra, o que pontuar mais vence.
 	//palavra[identificardor de palavra][numero de caracteres da palavra]
 using namespace std;
 
-void exibicao(void){ // exibe uma informação na tela por 1 segundo
+void exibicao(void){ // exibe uma informaÃ§Ã£o na tela por 1 segundo
 	Sleep(1000);
 	system("cls");
 }
-void comoJogar(void){ // informações iniciaisF
+void comoJogar(void){ // informaÃ§Ãµes iniciaisF
 		
 		int comecar = 0;
-		cout << "Ola, bem vindo ao 'roda roda ganhei' onde voce podera jogar um jogo de adicinhação com seus amigos!\n";
+		cout << "Ola, bem vindo ao 'roda roda ganhei' onde voce podera jogar um jogo de adicinhaÃ§Ã£o com seus amigos!\n";
 		cout << "\nFunciona assim :\n\n1 - Sao tres rodadas - um melhor de tres - onde voce ira inserir 3 palavras para seu amigo adivinhar e vice-versa.\n2 - A cada rodada sera sorteada uma das palavras para o outro adivinhar";
-		cout << "\n3 - O que errar menos chutes de letras vence a rodada.\n4 - o que vencer mais rodadas ganha a partida.\n5 - Ao final do jogo voces poderao escolher se irao ou nao jogar mais uma partida.\n6 - OBS: as palavras deverao ser inseridas sem acentos ou cedilha.\n7 - Devera ser inserida uma letra por vez\n\n";
+		cout << "\n3 - O que errar menos chutes de letras vence a rodada.\n4 - o que vencer mais rodadas ganha a partida.";
+		cout << "\n5 - Ao final do jogo voces poderao escolher se irao ou nao jogar mais uma partida.\n6 - OBS: as palavras deverao ser inseridas sem acentos ou cedilha.\n7 - Devera ser inserida uma letra por vez\n\n";
 		cout << "\nVamos comecar? Insira qualquer numero para inciar: ";
 		cin >> comecar;
 		exibicao();
@@ -43,7 +44,7 @@ void sorteio(int &sorteada, int vez, int *ja_foi_sorteada){ // sorteia uma das p
 		}
 		ja_foi_sorteada[vez] = sorteada;
 }
-char entrada(string *dica, char palavra[3][12]){ //Fução de Entrada das palavras
+char entrada(string *dica, char palavra[3][12]){ //FuÃ§Ã£o de Entrada das palavras
 	for(int i = 0; i < 3; i ++){
 		printf("Informe sua %d palavra de no maximo 12 letras: ", i + 1);
 		scanf("%s", palavra[i]);
@@ -53,7 +54,7 @@ char entrada(string *dica, char palavra[3][12]){ //Fução de Entrada das palavras
 	}
 }
 int adivinhacao(char palavra[3][12], string * dica, int sorteada){
-	//declaração de variaveis
+	//declaraÃ§Ã£o de variaveis
 	bool acertou;	
 	int acertos[12] = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}; //cada letra que acertou
 	int quantidade_l;
@@ -110,7 +111,7 @@ int adivinhacao(char palavra[3][12], string * dica, int sorteada){
 	return pontos;
 }
 void start(){
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int rodadaP1;
 	int rodadaP2;
 	char palavraP1[3][12] = {{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}} ;//palavra digitada do player 1
@@ -150,10 +151,10 @@ void start(){
 		}
 	}
 	if(rodadaP1 > rodadaP2){
-		cout << "Parabéns Player 1, voce venceu!";
+		cout << "ParabÃ©ns Player 1, voce venceu!";
 		exibicao();
 	}else if(rodadaP2 > rodadaP1){
-		cout << "Parabéns Player 2, voce venceu!";
+		cout << "ParabÃ©ns Player 2, voce venceu!";
 		exibicao();
 	}else{
 		cout << "Por algum acaso do destino terminou em empate!";
