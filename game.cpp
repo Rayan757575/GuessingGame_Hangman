@@ -3,38 +3,34 @@
 #include <stdlib.h>
 #include <Windows.h>
 
-	/*acertou palavra, 100 pontos; acertou palavra sorteia outra; errou, game over
-	a cada letra que ele tentar e errar a pontuação perde dez pontos*/
-	
-	//game de player dois. O player 1 digitara uma palavra e a dica dela, em seguida o outro tentará acertar a palavra, o que pontuar mais vence.
-	//palavra[identificardor de palavra][numero de caracteres da palavra]
 using namespace std;
+
+//palavra[identificardor de palavra][numero de caracteres da palavra]
 
 void exibicao(void){ // exibe uma informação na tela por 1 segundo
 	Sleep(1000);
 	system("cls");
 }
-void comoJogar(void){ // informações iniciaisF
-		
+void comoJogar(void){ // informações iniciais de como jogar
 		int comecar = 0;
 		cout << "Ola, bem vindo ao 'roda roda ganhei' onde voce podera jogar um jogo de adicinhação com seus amigos!\n";
 		cout << "\nFunciona assim :\n\n1 - Sao tres rodadas - um melhor de tres - onde voce ira inserir 3 palavras para seu amigo adivinhar e vice-versa.\n2 - A cada rodada sera sorteada uma das palavras para o outro adivinhar";
 		cout << "\n3 - O que errar menos chutes de letras vence a rodada.\n4 - o que vencer mais rodadas ganha a partida.";
 		cout << "\n5 - Ao final do jogo voces poderao escolher se irao ou nao jogar mais uma partida.\n6 - OBS: as palavras deverao ser inseridas sem acentos ou cedilha.\n7 - Devera ser inserida uma letra por vez\n\n";
 		cout << "\nVamos comecar? Insira qualquer numero para inciar: ";
+	
 		cin >> comecar;
 		exibicao();
 		cout << "Bom jogo!";
 		exibicao();
-		
 }
-void tracejado(int qtd){ //imprime os tracejados
+void tracejado(int qtd){ //imprime os tracejados de cada palavra
 	for(int i = 0; i < qtd; i ++){
 		cout << "_ ";
 	}
 	cout<< "\n";
 }
-void informe(int player, int rodada, int outroP){ // uma perfumaria para indicar a vez do player
+void informe(int player, int rodada, int outroP){ // uma perfumaria para indicar quem é o player da vez
 	printf("Player %d sua vez! \nAdivinhe a %d palavra do player %d", player, rodada + 1, outroP);
 }
 void sorteio(int &sorteada, int vez, int *ja_foi_sorteada){ // sorteia uma das palavras inseridas
@@ -116,14 +112,13 @@ void start(){
 	int rodadaP2;
 	char palavraP1[3][12] = {{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}} ;//palavra digitada do player 1
 	char palavraP2[3][12] = {{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}} ;//palavra digitada do player 2
-	string dicaP1[3];
+	string dicaP1[3]; 
 	string dicaP2[3];
 	int decrescemosP1; // a cada erro da tentativa o player perde 10 pontos, a cada rodada o que perder menos pontos leva a rodada e o que levar 2 ou mais ganha a partida, ou seja uma melhor de 3
 	int decrescemosP2;
 	int ja_foi_sorteada[3]; // verifica se o numero ja foi sorteado
 	int sorteada; // sorteia uma das palavras
 	
-
 	cout << "Player 1, informe suas tres palavras:\n";
 	entrada(dicaP1, palavraP1);
 	cout << "Player 2, informe suas tres palavras:\n";
