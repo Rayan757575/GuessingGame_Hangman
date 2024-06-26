@@ -1,10 +1,10 @@
 # GuessingGame_Hangman
-A simple game, made on C++
+Um simples jogo, feito em C++.
 
 ## Game
 
 Este jogo foi feito em C++, utilizando algumas bibliotecas de C, para um trabalho escolar de lógica e programação.
-O jogo tem como inspiração o  jogo  da “forca” e o programa "Roda roda Jequiti". Entretanto, ele é um jogo de dois jogadores, onde cada um irá inserir três palavras que serão sorteadas para o outro adivinhar, 
+O jogo tem como inspiração o  jogo  da “forca” e o programa "Roda roda Jequiti". Nesse sentido, ele é um jogo de dois jogadores, onde cada um irá inserir três palavras que serão sorteadas para o outro adivinhar, 
 sendo um jogo melhor de três.
 
 ### COMO JOGAR:
