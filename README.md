@@ -1,25 +1,36 @@
-# GuessingGame_Hangman
-Um simples jogo, feito em C++.
+🎮 GuessingGame_Hangman
+Um simples jogo de adivinhação feito em C++.
 
-## Game
+📜 Descrição
+Este projeto foi desenvolvido para um trabalho escolar de lógica e programação.
+O jogo foi feito em C++ utilizando algumas bibliotecas da linguagem C. Ele é inspirado no clássico jogo da "Forca" e no programa de televisão "Roda Roda Jequiti".
 
-Este jogo foi feito em C++, utilizando algumas bibliotecas de C, para um trabalho escolar de lógica e programação.
-O jogo tem como inspiração o  jogo  da “forca” e o programa "Roda roda Jequiti". Nesse sentido, ele é um jogo de dois jogadores, onde cada um irá inserir três palavras que serão sorteadas para o outro adivinhar, 
-sendo um jogo melhor de três.
+É um jogo para dois jogadores, onde cada um irá inserir três palavras para o outro tentar adivinhar. As palavras são sorteadas aleatoriamente, e o formato do jogo é uma melhor de três rodadas.
 
-### COMO JOGAR:
+🎯 Como Jogar
+É necessário apenas um compilador de C++ para rodar o jogo.
 
-Para jogar você só precisa de um compilador. Os jogadores poderão utilizar qualquer uma das teclas, que representam
-uma letra, para inserir as palavras. Ou seja, não é permitida a entrada de acentos, caracteres especiais, números, ou uso de cedilha em uma palavra.
-No momento de adivinhação os jogadores deverão inserir uma letra por vez.
+Cada jogador deverá inserir três palavras (sem acentos, cedilhas, números ou caracteres especiais).
 
-### SISTEMA DE VITÓRIA: 
+Durante a adivinhação, os jogadores devem inserir uma letra por vez.
 
-O sistema de pontos é articulado com base nos erros de cada jogador. Toda vez que um jogador insere uma letra que não está presente na palavra sorteada, ele
-perde 10 pontos. O jogador que, após acertar a palavra, errar menos chutes de letras vence a rodada. Logo, o jogador que vencer mais rodadas ganha a partida.
+Importante: as palavras devem ter no máximo 12 letras.
 
+🏆 Sistema de Vitória
+Cada erro (letra inserida que não pertence à palavra) faz o jogador perder 10 pontos.
 
+Vence a rodada quem errar menos durante a adivinhação da palavra.
 
+Vence a partida quem ganhar mais rodadas.
 
+🚀 Tecnologias
+C++
 
-    
+Bibliotecas C padrão (stdio.h, stdlib.h)
+
+Windows.h (para comandos como limpar a tela e pausar o jogo)
+
+📋 Observações
+Este projeto foi desenvolvido para fins educacionais.
+
+Funciona apenas em sistemas Windows, devido ao uso da biblioteca Windows.h.
