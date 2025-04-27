@@ -1,5 +1,7 @@
 # 🎮 GuessingGame_Hangman
 
+[![educational-project](https://img.shields.io/badge/Projeto-Educacional-blue)](https://github.com/)
+
 Um simples jogo de adivinhação feito em C++.
 
 ## 📜 Descrição
@@ -40,4 +42,3 @@ O jogo foi feito em C++ utilizando algumas bibliotecas da linguagem C. Ele é in
 - Este projeto foi desenvolvido para fins educacionais.
 - Funciona apenas em sistemas **Windows**, devido ao uso da biblioteca `Windows.h`.
   
-[![educational-project](https://img.shields.io/badge/Projeto-Educacional-blue)](https://github.com/)
